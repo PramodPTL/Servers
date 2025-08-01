@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 
+import MultiThreaded.Client;
+
 public class Client {
 
   public void run() throws IOException {
