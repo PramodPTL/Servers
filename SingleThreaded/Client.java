@@ -27,7 +27,6 @@ public class Client {
       Client client = new Client();
       client.run();
     } catch (Exception e) {
-      // TODO: handle exception
       e.printStackTrace();
     }
     

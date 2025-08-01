@@ -10,7 +10,7 @@ public class Server {
   public void run() throws IOException {
     int port = 8010;
     ServerSocket socket = new ServerSocket(port);
-    socket.setSoTimeout(10000);
+    socket.setSoTimeout(100000);
 
     while (true) {
       try {
@@ -23,6 +23,7 @@ public class Server {
         toClient.close();
         fromClient.close();
         acceptedConnection.close();
+        //socket.close();
       } catch (IOException ex) {
         ex.printStackTrace();
       }
@@ -34,7 +35,7 @@ public class Server {
       Server server = new Server();
       server.run();
     } catch (Exception e) {
-      // TODO: handle exception
+      
       e.printStackTrace();
     }
   }
